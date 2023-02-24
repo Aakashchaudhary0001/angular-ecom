@@ -10,9 +10,10 @@ import { SignUp } from '../data-type';
 })
 export class SellerComponent implements OnInit {
 
-  constructor(private seller: SellerService, private router:Router) { }
-
-  ngOnInit(): void {
+  constructor(private seller: SellerService, private router:Router) {}
+  
+  ngOnInit():void{
+    this.seller.reloadSeller()
   }
   signUp(data: SignUp): void {
 
