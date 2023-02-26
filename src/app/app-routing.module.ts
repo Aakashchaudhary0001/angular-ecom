@@ -9,7 +9,7 @@ import { SellerComponent } from './seller/seller.component';
 const routes: Routes = [
   // App Routes goes here
   {
-    path: 'Home',
+    path: '',
     component: HomeComponent,
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   
   // otherwise redirect to home
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: '' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
