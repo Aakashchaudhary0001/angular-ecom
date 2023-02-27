@@ -7,13 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private route: Router) {}
+  menuType: String='default';
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
-    this.route.events.subscribe((val:any)=>{
-      console.log(val.url);
-      
+  
+    this.route.events.subscribe((val: any) => {
+      if(val.url){
+        console.log(val.url);
+        
+        if (localStorage.getItem('seller') && val.url.includes('seller')) {
+          console.log("in seller area");
+          this.menuType="seller"
+
+        }
+        else {
+          console.log("outside seller");
+          this.menuType='default'
+
+        }
+
+      }
+
 
     })
   }
