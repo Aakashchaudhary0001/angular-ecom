@@ -37,7 +37,35 @@
       "id": 6
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "name": "iphone",
+      "price": "10,0000",
+      "color": "black",
+      "category": "mobiles",
+      "description": "good phone",
+      "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SL1500_.jpg",
+      "id": 1
+    },
+    {
+      "name": "iphonenew",
+      "price": "50000",
+      "color": "white",
+      "category": "mobile",
+      "description": "good phone",
+      "image": "\"https://m.media-amazon.com/images/I/71yzJoE7WlL._SL1500_.jpg\"",
+      "id": 2
+    },
+    {
+      "name": "iphonenew",
+      "price": "50000",
+      "color": "white",
+      "category": "mobile",
+      "description": "good",
+      "image": "\"https://m.media-amazon.com/images/I/71yzJoE7WlL._SL1500_.jpg\"",
+      "id": 3
+    }
+  ],
   "users": [],
   "cart": [],
   "orders": []
