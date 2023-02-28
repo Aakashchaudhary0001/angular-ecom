@@ -43,5 +43,7 @@ export class SellerComponent implements OnInit {
     this.showLogin = false
   }
 
+ 
+
 }
 
