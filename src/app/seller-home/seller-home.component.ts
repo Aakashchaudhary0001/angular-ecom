@@ -14,18 +14,15 @@ export class SellerHomeComponent implements OnInit {
   constructor(private product: ProductService) { }
 
   ngOnInit(): void {
-    this.product.productList().subscribe((result) => {
-      console.log(result)
-      if (result) {
-        this.productList = result;
-      }
-    })
+    this.list();
+    
   }
     deleteProduct(id: number) {
       console.log("test id", id)
       this.product.deleteProduct(id).subscribe((result) => {
         if (result) {
           this.productMessage = "Product is deleted";
+          this.list()
 
 
         }
@@ -36,6 +33,15 @@ export class SellerHomeComponent implements OnInit {
       }, 3000);
 
     }
+   list(){
+    this.product.productList().subscribe((result) => {
+      console.log(result)
+      if (result) {
+        this.productList = result;
+      }
+    })
+
+   }
 
   }
 
