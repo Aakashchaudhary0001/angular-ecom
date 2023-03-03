@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     SellerComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
+    SellerUpdateProductComponent,
   ],
   imports: [
     BrowserModule,
