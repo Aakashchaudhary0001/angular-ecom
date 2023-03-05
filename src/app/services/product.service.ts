@@ -7,15 +7,19 @@ import { product } from '../data-type';
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
-  addProduct(data:product){
-   return this.http.post('http://localhost:3000/products',data);
-   }
-   productList(){
+  constructor(private http: HttpClient) { }
+  addProduct(data: product) {
+    return this.http.post('http://localhost:3000/products', data);
+  }
+  productList() {
     return this.http.get<product[]>('http://localhost:3000/products');
 
-   }
-   deleteProduct(id:number){
+  }
+  deleteProduct(id: number) {
     return this.http.delete(`http://localhost:3000/products/${id}`);
-   }
+  }
+
+  getProduct(id: any) {
+    return this.http.get<product>(`http://localhost:3000/products/${id}`)
+  }
 }
