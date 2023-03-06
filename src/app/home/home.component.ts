@@ -9,6 +9,7 @@ import { ProductService } from '../services/product.service';
 })
 export class HomeComponent implements OnInit {
   popularProducts:undefined | product[]
+  trendyProducts:undefined | product[]
 
 
   constructor(private product:ProductService) { }
@@ -19,6 +20,12 @@ export class HomeComponent implements OnInit {
       
       this.popularProducts=data;
 
+
+    });
+    this.product.trendingProducts().subscribe((data)=>{
+      console.log(data);
+      this.trendyProducts=data;
+      
 
     })
     

@@ -73,6 +73,24 @@
       "description": "good laptop",
       "image": "https://m.media-amazon.com/images/I/71MO5pBkc7L._SL1500_.jpg\n",
       "id": 7
+    },
+    {
+      "name": "shirt",
+      "price": "900",
+      "color": "colorful",
+      "category": "cloth",
+      "description": "good fabric",
+      "image": "https://i.etsystatic.com/33552836/r/il/9ba71b/4269730233/il_794xN.4269730233_9uti.jpg",
+      "id": 8
+    },
+    {
+      "name": "dress",
+      "price": "5000",
+      "color": "black",
+      "category": "cloth",
+      "description": "cute dress ",
+      "image": "https://cdn.luxe.digital/media/2021/02/24170750/best-little-black-dresses-grace-karin-review-luxe-digital%402x.jpg",
+      "id": 9
     }
   ],
   "users": [],
