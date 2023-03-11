@@ -91,6 +91,24 @@
       "description": "cute dress ",
       "image": "https://cdn.luxe.digital/media/2021/02/24170750/best-little-black-dresses-grace-karin-review-luxe-digital%402x.jpg",
       "id": 9
+    },
+    {
+      "name": "truck",
+      "price": "14,0000",
+      "color": "blue",
+      "category": "vehicle",
+      "description": "solid vehicle",
+      "image": "https://www.tatamotors.com/wp-content/uploads/2020/08/ultra-icv.jpg",
+      "id": 10
+    },
+    {
+      "name": "bike",
+      "price": "560000",
+      "color": "red",
+      "category": "vehicle",
+      "description": "sport bike",
+      "image": "https://images.carandbike.com/bike-images/large/ducati/supersport/ducati-supersport.jpg?v=16",
+      "id": 11
     }
   ],
   "users": [],

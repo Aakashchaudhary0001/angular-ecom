@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
         console.log(val.url);
 
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.log("in seller area");
+          
           this.menuType = "seller";
           if (localStorage.getItem('seller')) {
             let sellerStore = localStorage.getItem('seller');
@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
 
         }
         else {
-          console.log("outside seller");
+         
           this.menuType = 'default'
 
         }
@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
     if (query) {
       const element = query.target as HTMLInputElement;
       this.product.searchProducts(element.value).subscribe((result) => {
-        console.log(result);
+       
         if (result.length > 5) {
           result.length = 5
         }
@@ -66,6 +66,12 @@ export class HeaderComponent implements OnInit {
   }
   hideSearch() {
     this.searchResult = undefined
+
+  }
+  submitSearch(val:string){
+    console.log(val);
+    this.route.navigate([`search/${val}`])
+    
 
   }
 
