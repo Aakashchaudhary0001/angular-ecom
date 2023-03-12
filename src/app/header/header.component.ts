@@ -10,8 +10,9 @@ import { ProductService } from '../services/product.service';
 })
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
-  sellername: string = '';
-  searchResult: undefined | product[]
+  sellername: string = "";
+  searchResult: undefined | product[];
+  username: string = "";
 
   constructor(private route: Router, private product: ProductService) { }
 
@@ -19,40 +20,35 @@ export class HeaderComponent implements OnInit {
 
     this.route.events.subscribe((val: any) => {
       if (val.url) {
-        console.log(val.url);
-
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          
-          this.menuType = "seller";
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller');
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellername = sellerData.name;
-          }
-
+          let sellerStore = localStorage.getItem('seller');
+          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+          this.sellername = sellerData.name;
+          this.menuType = 'seller';
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.username = userData.name;
+          this.menuType = 'user';
+        } else {
+          this.menuType = 'default';
         }
-        else {
-         
-          this.menuType = 'default'
-
-        }
-
       }
-
-
     });
-
-
   }
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
   }
+  userLogout() {
+    localStorage.removeItem('user')
+    this.route.navigate(['/user-auth'])
+  }
   searchProduct(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement;
       this.product.searchProducts(element.value).subscribe((result) => {
-       
+
         if (result.length > 5) {
           result.length = 5
         }
@@ -68,14 +64,14 @@ export class HeaderComponent implements OnInit {
     this.searchResult = undefined
 
   }
-  redirectToDetails(id:number){
-    this.route.navigate(['details/'+id])
+  redirectToDetails(id: number) {
+    this.route.navigate(['details/' + id])
 
   }
-  submitSearch(val:string){
+  submitSearch(val: string) {
     console.log(val);
     this.route.navigate([`search/${val}`])
-    
+
 
   }
 

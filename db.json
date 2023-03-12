@@ -111,7 +111,38 @@
       "id": 11
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "name": "Aakash Chaudhary",
+      "email": "aaki@123",
+      "password": "32456",
+      "id": 1
+    },
+    {
+      "name": "petrr",
+      "email": "peter@user",
+      "password": "879",
+      "id": 2
+    },
+    {
+      "name": "sakshi",
+      "email": "sak@123",
+      "password": "112",
+      "id": 3
+    },
+    {
+      "name": "deepshikha",
+      "email": "deeps@12343",
+      "password": "mohit",
+      "id": 4
+    },
+    {
+      "name": "deep",
+      "email": "",
+      "password": "",
+      "id": 5
+    }
+  ],
   "cart": [],
   "orders": []
 }
