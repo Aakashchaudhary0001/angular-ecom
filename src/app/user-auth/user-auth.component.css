@@ -5,3 +5,10 @@
     color: darkslateblue;
     text-align: center;
 }
+.user-auth{
+    margin-bottom: 100px;
+}
+.common-form a{
+    color: blueviolet;
+    cursor: pointer;
+}

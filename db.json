@@ -115,19 +115,19 @@
     {
       "name": "Aakash Chaudhary",
       "email": "aaki@123",
-      "password": "32456",
+      "password": "mohit",
       "id": 1
     },
     {
       "name": "petrr",
       "email": "peter@user",
-      "password": "879",
+      "password": "mohit",
       "id": 2
     },
     {
       "name": "sakshi",
       "email": "sak@123",
-      "password": "112",
+      "password": "mohit",
       "id": 3
     },
     {
@@ -138,8 +138,8 @@
     },
     {
       "name": "deep",
-      "email": "",
-      "password": "",
+      "email": "deeps@123",
+      "password": "mohit",
       "id": 5
     }
   ],

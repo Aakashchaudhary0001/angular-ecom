@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SignUp } from '../data-type';
+import { login, SignUp } from '../data-type';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent implements OnInit {
+  showLogin:boolean=true
+  authError:string="";
 
   constructor(private user:UserService) { }
 
@@ -16,7 +18,26 @@ export class UserAuthComponent implements OnInit {
   }
   signUp(data:SignUp){
     this.user.userSignUp(data)
+ 
+
+  }
+  login(data:login){
+    this.user.userLogin(data)
+    this.user.invalidUserAuth.subscribe((result)=>{
+      if(result){
+        this.authError="Please enter valid user details";
+      }
+      
+    })
     
+  }
+  opensignUp(){
+    this.showLogin=false
+
+  }
+  openLogin(){
+    this.showLogin=true
+
 
   }
 
